@@ -32,9 +32,6 @@ numberInput.addEventListener('input', (event)=>{
         errorNumber.innerText = 'Wrong format, numbers only';
         numberInput.style.borderColor = 'red';
       
-        // }if(regExp.test(numberInput.value) == false) {
-        //    errorNumber.innerText =' ';
-        // }
         }else{
             errorNumber.innerText ='';  
             numberInput.style.borderColor = 'hsl(270, 3%, 87%)';
@@ -121,14 +118,3 @@ let button = document.querySelector('.buttonSend');
     }
 
  })
-
- //funtion error
-//  function showError(inputDiv, errorDiv,msgDiv) {
-//     if(errorDiv.innerText==msgDiv) { 
-//         return inputDiv.style.borderColor='red';   
-//         }else{
-
-
-//         }
-//     }
- 
