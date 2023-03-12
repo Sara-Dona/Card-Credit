@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+.containerViolet { 
+    background: url(images/bg-main-desktop.png) no-repeat;
+    position: relative;
+    width: 30%;
+    min-height: 100vh;
+    background-size: cover;
+}
+.containerViolet img{
+    display: none;
+}
+.cardFront {
+    background-image: url(images/bg-card-front.png);
+    position: absolute;
+    width: 445px;
+    height: 245px;
+    top: 148px;
+    left: 230px;
+}
+.svg {
+    padding: 32px;
+}
+
+p, span {
+    color: #fff;
+    text-transform: uppercase;
+}
+p {
+    text-align: center;
+    padding-top:45px;
+    padding-bottom: 15px;
+    letter-spacing: 0.25em;
+    font-size: x-large;
+}
+.cardDetails {
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 0.25em;
+    
+}
+.cardBack {
+    background-image: url(images/bg-card-back.png);
+    position: absolute;
+    width: 445px;
+    height: 245px;
+    top: 420px;
+    left: 310px;
+}
+.numberBack {
+    margin: 58px 0px 0px 253px;
+    letter-spacing: 0.25em;
+}
+.cardDetails .cardMonth{
+    margin-right: -68px;
+}
+.cardDetails .cardYear {
+    margin-left: -68px;
+}
+
+.containerInfo{
+    width: 70%;
+    min-height: auto;
+    display: flex;
+    letter-spacing: 0.25em;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+}
+
+form { 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+}
+
+.containerInfo .Donnes {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    color: hsl(278, 68%, 11%);
+}
+
+.containerInfo input  {
+    padding: 11px 0px 13px 9px;
+    border-radius: 10px;
+    font-size: large;
+    outline: none;
+    width: 100%;
+}
+.date {
+    width: 100px;
+}
+.inputCvc {
+    width: 172px;
+}
+.containerInfo .exp.date{
+    display: grid;
+    grid-template-areas: 1fr 1fr;
+    gap: 0 16px;
+}
+
+input::placeholder{
+    color:  hsl(279, 6%, 55%)
+}
+
+.exp-date{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+    width: auto;
+} 
+
+.Date {
+    display: flex;
+    gap: 10px;
+}
+
+.errorDate{
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 15px;
+    border-radius: 15px;
+    background: hsl(278, 68%, 11%);
+    border: transparent;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.errorCardHolder {
+    margin-top: -15px;
+    color: hsl(0, 100%, 66%);
+}
+
+.errorCardNumber {
+    margin-top: -15px;
+    color: hsl(0, 100%, 66%);
+}
+.errorDate {
+    color: hsl(0, 100%, 66%);
+}
+.errorCvc {
+    color: hsl(0, 100%, 66%);
+}
+
+.thankYou {
+    display: none;
+    margin: 170px auto;
+}
+
+.thankYou h1 {
+    color: hsl(278, 68%, 11%);
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.addDetails{
+    color: hsl(279, 6%, 55%);
+    text-align: center;
+    letter-spacing: 0;
+}
+.thankYou img {
+    display: block;
+    margin: 0px 126px 30px;
+}
+.buttonThankYou {
+    margin-top: 30px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1430px) {
+
+    .container{
+        width: 100%;
+    }
+    .cardBack{
+      left: 110px;
+    }
+
+    .cardFront {
+        left: 60px;
+    }
+    form {
+        margin-left: 400px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    .containerViolet {
+        background: none;
+        min-height: auto;
+        width: 100%; 
+    }
+    form {
+        margin-left: 150px;
+    }
+
+    .containerViolet img{
+        display:  block;
+        width: 100%;
+        width: 71vh;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 120px;
+        min-width: 100%;
+    }
+
+    .containerInfo{
+        margin-left: 110px;
+        margin-right: 40px;
+    }
+
+    .cardBack{
+        top: 50px;
+        left: 115px; 
+    }
+
+    .cardFront{
+        top: 189px;
+        left: 30px;
+        z-index: 1;  
+    }
+}
